@@ -35,6 +35,10 @@ controller.hears('.*', ['mention'], function (bot, message) {
   bot.reply(message, 'You really do care about me. :heart:')
 })
 
+controller.hears(['who are the best growth hackers', 'best growth hackers in town'], ['direct_message'],  function (bot, message) {
+  bot.reply(message, 'You know that damn well... Growth Tribe offcourse! :heart:')
+})
+
 controller.hears('help', ['direct_message', 'direct_mention'], function (bot, message) {
   var help = 'I will respond to the following messages: \n' +
       '`bot hi` for a simple message.\n' +
