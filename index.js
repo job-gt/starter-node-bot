@@ -39,6 +39,10 @@ controller.hears(['who are the best growth hackers', 'best growth hackers in tow
   bot.reply(message, 'You know that damn well... Growth Tribe offcourse! :heart:')
 })
 
+controller.hears(['focus', 'work'], ['direct_message', 'direct_mention'], function (bot, message) {
+  bot.reply(message, 'Okay <@' + message.user + '>, Get Shit Done!')
+})
+
 controller.hears('help', ['direct_message', 'direct_mention'], function (bot, message) {
   var help = 'I will respond to the following messages: \n' +
       '`bot hi` for a simple message.\n' +
@@ -69,8 +73,4 @@ controller.hears(['attachment'], ['direct_message', 'direct_mention'], function 
 
 controller.hears('['direct_message', 'direct_mention']', ['direct_message', 'direct_mention'], function (bot, message) {
   bot.reply(message, 'Sorry <@' + message.user + '>, I don\'t understand. \n')
-})
-
-controller.hears(['focus', 'work'], ['direct_message', 'direct_mention'], function (bot, message) {
-  bot.reply(message, 'Okay <@' + message.user + '>, Get Shit Done!')
 })
